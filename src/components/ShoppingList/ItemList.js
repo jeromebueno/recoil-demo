@@ -1,9 +1,22 @@
-import {TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody} from '@material-ui/core'
-import { useRecoilValue } from 'recoil';
-import { shoppingListState } from '../atoms/shoppingListState';
+import {TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody, Button} from '@material-ui/core'
+import { useEffect } from 'react';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { removeItem } from '../../api/shopping-list';
+import { shoppingListState } from '../../state/atoms/shoppingListState';
+import { currentShoppingListState } from '../../state/selectors/currentShoppingListState';
 
 function ItemList() {
-    const shoppingList = useRecoilValue(shoppingListState)
+    const currentShoppingList = useRecoilValue(currentShoppingListState)
+    const [shoppingList, setShoppingList] = useRecoilState(shoppingListState)
+
+    useEffect(() => {
+      setShoppingList(currentShoppingList)
+    },[currentShoppingList, setShoppingList]) 
+
+    const handleDeleteItem = async(itemId) => {
+      await removeItem(itemId)
+      setShoppingList(shoppingList.filter(item => item.id !== itemId))
+    }
 
     return (
       <div>
@@ -13,6 +26,7 @@ function ItemList() {
           <TableRow>
             <TableCell>Order</TableCell>
             <TableCell align="right">Name</TableCell>
+            <TableCell align="right"></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -21,6 +35,9 @@ function ItemList() {
               <TableCell component="th" scope="row">{i + 1}</TableCell>
               <TableCell component="th" scope="row">
                 {row.name}
+              </TableCell>
+              <TableCell component="th" scope="row">
+              <Button variant="contained" color="secondary" onClick={() => handleDeleteItem(row.id)}>Delete</Button>
               </TableCell>
             </TableRow>
           ))}

@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import {
     RecoilRoot,
   } from 'recoil';
@@ -9,7 +10,10 @@ function ShoppingList() {
   return (
       <RecoilRoot>
           <AddItem/>
-          <ItemList/>
+          <Suspense fallback={<div>Loading list...</div>}>
+            <ItemList/>
+          </Suspense>
+          
       </RecoilRoot>
   );
 }
