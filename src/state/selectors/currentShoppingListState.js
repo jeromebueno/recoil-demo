@@ -7,4 +7,4 @@ export const currentShoppingListState = selector({
       const response = await getShoppingList()
       return response;
     },
-  });
+});
