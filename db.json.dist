@@ -1,16 +1,33 @@
 {
-  "shopping-list-item": [
+  "items": [
     {
-      "name": "test",
-      "id": 1
+      "name": "Poivron vert",
+      "id": 1,
+      "img": "https://c.pxhere.com/photos/3e/62/green_bell_pepper_vegetable_food_fresh_agriculture_garden_healthy_ingredient-708815.jpg!d",
+      "price": .7,
+      "cat": "Fruits & Legumes"
     },
     {
-      "name": "Poivron",
-      "id": 3
+      "name": "Panier de fruits de Youplay",
+      "id": 2,
+      "img": "https://static.openfoodfacts.org/images/products/332/977/006/3525/front_fr.4.full.jpg",
+      "price": 2.75,
+      "cat": "Produits Laitiers"
     },
     {
-      "name": "ab",
-      "id": 4
-    }
-  ]
+      "name": "Tisane nuit calme",
+      "id": 3,
+      "price": 1.9,
+      "img": "https://static.openfoodfacts.org/images/products/541/076/910/0081/front_fr.5.full.jpg",
+      "cat": "Sante & Bien etre"
+    },
+    {
+      "name": "Aubergine",
+      "id": 4,
+      "img": "https://www.biendecheznous.be/sites/default/files/styles/image_on_detailpage/public/ps_image/istock_aubergine.jpg?itok=bSr_QuF-",
+      "price": 1.69,
+      "cat": "Fruits & Legumes"
+    },
+  ],
+  "user-cart": []
 }
