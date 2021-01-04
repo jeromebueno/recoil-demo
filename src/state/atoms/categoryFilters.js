@@ -1,5 +1,4 @@
-import { useCallback } from "react";
-import { atom, useSetRecoilState } from "recoil";
+import { atom } from "recoil";
 
 export const categoryFilters = atom({
   key: "categoryFilters",
@@ -16,14 +15,3 @@ export const categoryFilters = atom({
     },
   ],
 });
-
-export const useToggleCategory = (catName) => {
-  const setFilters = useSetRecoilState(categoryFilters);
-  return () =>
-    setFilters((existingFilters) => {
-      if (!existingFilters.includes(catName)) {
-        return [...existingFilters, catName];
-      }
-      return existingFilters.filter((cat) => cat !== catName);
-    });
-};

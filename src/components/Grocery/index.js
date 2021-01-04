@@ -1,6 +1,6 @@
 import React from "react";
 import ItemList from "./ItemList";
-import { CircularProgress, Container, Grid } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import Header from "../Header";
 import LoadingItemList from "./LoadingItemList";
 
