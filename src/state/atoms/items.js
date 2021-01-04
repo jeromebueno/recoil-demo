@@ -1,7 +1,10 @@
-import { atomFamily } from "recoil";
+import { selector } from "recoil";
 import { getItems } from "../../api/shopping-list";
 
-export const allItems = atomFamily({
+export const allItems = selector({
   key: "allItems",
-  default: () => getItems(),
+  get: async () => {
+    const items = await getItems();
+    return items;
+  },
 });

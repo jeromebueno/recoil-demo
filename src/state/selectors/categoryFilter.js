@@ -7,8 +7,8 @@ export const categoryFilter = selectorFamily({
     const existingFilters = get(categoryFilters);
     return existingFilters.includes(catName);
   },
-  set: (catName) => ({ set }) => {
-    set(categoryFilters, (existingFilters) => {
+  set: (catName) => ({ set: updateAtom }) => {
+    updateAtom(categoryFilters, (existingFilters) => {
       if (!existingFilters.includes(catName)) {
         return [...existingFilters, catName];
       }

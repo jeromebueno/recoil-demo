@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ItemUI = ({ name, price, img }) => {
+const ItemUI = ({ name, price, img, category }) => {
   const classes = useStyles();
 
   return (
@@ -57,6 +57,9 @@ const ItemUI = ({ name, price, img }) => {
         <IconButton aria-label="share">
           <ShareIcon />
         </IconButton>
+        <Typography variant="body2" color="textSecondary" component="span">
+          {category}
+        </Typography>
       </CardActions>
     </Card>
   );

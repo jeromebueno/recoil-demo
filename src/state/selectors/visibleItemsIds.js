@@ -8,7 +8,7 @@ export const visibleItemsIds = selector({
   get: async ({ get }) => {
     const categories = get(categoryFilters);
     const search = get(searchText);
-    const items = await get(allItems());
+    const items = await get(allItems);
 
     return items
       .filter(filterByCat(categories))
