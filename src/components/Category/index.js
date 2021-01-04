@@ -1,20 +1,12 @@
 import React from "react";
-import ToggleButton from "@material-ui/lab/ToggleButton";
 import { useRecoilState } from "recoil";
 import { categoryFilter } from "../../state/selectors/categoryFilter";
+import CategoryCard from "../ui/Category";
 
 function Category({ name }) {
   const [isActive, toggle] = useRecoilState(categoryFilter(name));
-  return (
-    <ToggleButton
-      value="check"
-      selected={isActive}
-      onChange={toggle}
-      variant="primary"
-    >
-      {name}
-    </ToggleButton>
-  );
+
+  return <CategoryCard name={name} isActive={isActive} toggle={toggle} />;
 }
 
 export default Category;
