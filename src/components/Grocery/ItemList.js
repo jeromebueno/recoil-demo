@@ -1,11 +1,11 @@
 import React from "react";
 import Item from "../Item";
 import { useRecoilValue } from "recoil";
-import { selectFilteredItemIds } from "../../state/selectors/filteredItemIds";
+import { visibleItemsIds } from "../../state/selectors/visibleItemsIds";
 import { Grid } from "@material-ui/core";
 
 function Grocery() {
-  const items = useRecoilValue(selectFilteredItemIds);
+  const items = useRecoilValue(visibleItemsIds);
   return (
     <Grid container>
       {items.map((id) => (

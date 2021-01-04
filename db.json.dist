@@ -4,15 +4,15 @@
       "name": "Poivron vert",
       "id": 1,
       "img": "https://driveimg1.intermarche.com/fr/Ressources/images/produit/zoom/89E759FE59AFF2E6BE13455C959EB46D-notre-selection-poivrons-vert.jpg",
-      "price": 0.7,
+      "price": 0.73,
       "cat": "Fruits & Legumes"
     },
     {
-      "name": "Panier de fruits de Siouplé",
-      "id": 2,
-      "img": "https://courses.monoprix.fr/images-v2/0c44253f-c4a3-4340-9d37-d41e42b9d14a/235c7f87-0a09-4b04-be29-80e27ef55216/eccdfc0b-34f2-4eb9-b844-ebb1ff04f987/0cf42571-d413-4d74-a575-a69d9de87ad1/500x500.jpg",
-      "price": 2.75,
-      "cat": "Produits Laitiers"
+      "name": "Aubergine",
+      "id": 4,
+      "img": "https://driveimg1.intermarche.com/fr/Content/images/boitmal/produit/zoom/ACCA8217069FD8FF3E5D3490C4E1C303.jpg",
+      "price": 1.69,
+      "cat": "Fruits & Legumes"
     },
     {
       "name": "Tisane nuit calme",
@@ -22,11 +22,11 @@
       "cat": "Sante & Bien etre"
     },
     {
-      "name": "Aubergine",
-      "id": 4,
-      "img": "https://driveimg1.intermarche.com/fr/Content/images/boitmal/produit/zoom/ACCA8217069FD8FF3E5D3490C4E1C303.jpg",
-      "price": 1.69,
-      "cat": "Fruits & Legumes"
+      "name": "Panier de fruits de Siouplé",
+      "id": 2,
+      "img": "https://courses.monoprix.fr/images-v2/0c44253f-c4a3-4340-9d37-d41e42b9d14a/235c7f87-0a09-4b04-be29-80e27ef55216/eccdfc0b-34f2-4eb9-b844-ebb1ff04f987/0cf42571-d413-4d74-a575-a69d9de87ad1/500x500.jpg",
+      "price": 2.75,
+      "cat": "Produits Laitiers"
     }
   ]
 }
