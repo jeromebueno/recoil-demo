@@ -7,12 +7,12 @@ function Header() {
   return (
     <Container className="header">
       <Typography variant="h3" component="h1">
-        Welcome to Henri Pottier's Grocery
+        Welcome to Henri Pottier's Grocery !
       </Typography>
-      <SearchBar />
       <React.Suspense fallback={"Loading Categories..."}>
         <CategoryList />
       </React.Suspense>
+      <SearchBar />
     </Container>
   );
 }

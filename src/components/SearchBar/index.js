@@ -10,6 +10,7 @@ function SearchBar() {
     <TextField
       onChange={(e) => setSearch(e.target.value)}
       label="What are you looking for ?"
+      fullWidth
     />
   );
 }

@@ -1,13 +1,20 @@
 import React from "react";
-import { useToggleCategory } from "../../state/atoms/categoryFilters";
+import ToggleButton from "@material-ui/lab/ToggleButton";
+import { useRecoilState } from "recoil";
+import { categoryFilter } from "../../state/selectors/categoryFilter";
 
-function SearchBar({ name }) {
-  const toggleCat = useToggleCategory(name);
+function Category({ name }) {
+  const [isActive, toggle] = useRecoilState(categoryFilter(name));
   return (
-    <div onClick={toggleCat} className="category">
+    <ToggleButton
+      value="check"
+      selected={isActive}
+      onChange={toggle}
+      variant="primary"
+    >
       {name}
-    </div>
+    </ToggleButton>
   );
 }
 
-export default SearchBar;
+export default Category;
