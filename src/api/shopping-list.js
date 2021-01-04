@@ -3,5 +3,5 @@ export const getItems = async () => {
     method: "GET",
   });
   const data = await response.json();
-  return new Promise((resolve) => setTimeout(resolve, 500, data));
+  return new Promise((resolve) => setTimeout(resolve, 1000, data));
 };

@@ -10,7 +10,7 @@ export const categoryFilters = atom({
         if (!newValue.length) {
           document.title = "Henri Pottier's Grocery";
         } else {
-          document.title = `Henri Pottier's Grocery | ${newValue.join(", ")}`;
+          document.title = `${newValue.join(", ")} | Henri Pottier's Grocery`;
         }
       });
     },
