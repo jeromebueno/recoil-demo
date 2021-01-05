@@ -1,11 +1,11 @@
-import ShoppingList from "./components/ShoppingList/";
-import { Container } from "@material-ui/core";
+import Grocery from "./components/Grocery";
+import { RecoilRoot } from "recoil";
 
 function App() {
   return (
-    <Container>
-      <ShoppingList />
-    </Container>
+    <RecoilRoot>
+      <Grocery />
+    </RecoilRoot>
   );
 }
 
